@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stack.V_Mano — Stealth Pivot Detection for Competitors</title>
+    <meta name="description" content="AI-powered competitive intelligence platform that detects hidden pivots 3-6 months before public announcements.  Track job postings, patents, partnerships & more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- PWA & Mobile Optimization -->
+    <meta name="theme-color" content="#0a0a12">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stack.V_Mano — Stealth Pivot Detection">
+    <meta property="og:description" content="Detect competitor pivots 6 months before anyone else">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <div class="scan-lines"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-radar">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEo0lEQVR4nO1aXYhVVRReUZlZZtibFRS9ZWEQFPQjNo71NFoPQW9DREL0ZEWlhQe0mbXOjKOO4U8l0g8l9By9RFBEBD1EYakEveio1ahUL6bNzCd7nTP3eu85Z59z7j373DuxP9jIXPfPWmuvvX4PkYeHh4eHh4eHh0c9QLCYIPcSeJDAG+IxSBi5R//vfwdMXkfgpwh8gMDHCTJLEGSM2XjOfkL4JCFYRAsW2H47gXcR+JyF4Zyha3cS5DZaMIAsI/AkQS52znhimL12EoKbqK8BeYIgpytkvF0jThFkHfUdgKsIvC3nfVc1zBmBntkXwKdXE/hQDYy3a8NBPbsPbv5Qh0ycJciReJztXAi91ASo2hcl+ERkHHlAXWNqfBCuJcieaG5hIWztCe+kjPBMAQKnCfxaKZ+Od64l8MaCBnWWMPq4U14TMO6oGHEfE8ZvoE6B4EYCHy5wzhQhXNrxOaUB2Z1z63ME3lLJ+1Q7I29Ee1rPnOj6rOIRXl6Qw1uammLedQdaEEWSq5t/GyFYz/yX8Natpc+p/vaN2sc3D94U//Y3QaQRyRl7gLG7CHw/gVe1EA5ZSZDP4rxgrhEGRx7ncG+1AJrYWGJ7PqPvNlNY/AdBviHwpZT15wnyJUH+a/195OHmfuHSeA+La3WZQMFkddbbf6Ft/ngJN5kxRh9s2/NF+/xwvUsBHLAcfkLdV+v8jRUI4JYUF3nSsmafSwEct6j/ZIr1/qJ7AcizKXS8baHjqCPmJ663JzvhY21ErqmA+Xm7ck3b3oOW+TNuKkswZazMQ+cSh1pvqewIH025DNualQ4EEK61CGA6OZ8/r04Aqc/A5o3WOBAAb7AQeCRl/ncVCuCl5P6aRdboCRCutxD4o2MNGE7Z/6eaBcADFpU7lTJ/tDoB8KqU/c8UNsg1GMFLapha5o/dV5EAjiVpCZYkI0bnRjBYbHeDPJBcwx92ybzJB4ZS9s1xgykFlxoCodHkfOOu+KsumH85nQ6TWGWu+8UN8wbasbEGLFEiolnexPJm0VReiYoWhd/8t5muTBMy+d2ydi85A0y7ykr8sEZtkO8J8hdBHmquVUE8EJXHUtdOEfhpAt9hp0GeyxHekEMBBItyWl2nCbtuju3FDwT5kzB+Z+se2jXKIn61/fyJ5Tm3P+2+nwjT77PewPvRPHmkebPyjBY2TG4P+c2y/nX72fJRjgbucMu8gTJiyk9WQjbHcz8oafi2UxZM+du+9gIhXEG1ANqxtWmBKWW9Gufupiz2tVpn/Zf/KSWAKK3eXEB4Y/Uw3yh2aqMyjyijAcvoSpjApqgAtNMsn+SfYwokV5TiagFkXbFmqIasw41qEfjX3FhCNUeez6n/za+ZSQ3CahJCUPx9qyD22ENY/lkru4UYb6x5szfMN9/neyUNXYWD36U+aY8f7AnzPW+PzyNqWmyt5wMJffM9VHsboixtyiHzJ3tn8IpCuzeyo0CwVGZcUD9fu6vrBqbfpxa9068/9ManI2HWFeE5S6BMPZH3atPC+lGFvu+j8dyhhf2hZBY0nx+5O6oxGsGocAai31xVcjw8PDw8PDw8PDyoDZcBYOgw/Fhc1aoAAAAASUVORK5CYII=" alt="github" style="max-width: 48px">
+                </div>
+                <span class="logo-text">Stack.<span class="accent">V_Mano</span></span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#signals">Signals</a>
+                <a href="#dna">DNA Analysis</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            
+            <button class="cta-nav">
+                <span class="pulse-ring"></span>
+                Get Started
+            </button>
+            
+           
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#features">Features</a>
+                <a href="#signals">Signals</a>
+                <a href="#dna">DNA Analysis</a>
+                <a href="#pricing">Pricing</a>
+                <button class="btn-primary mobile-cta">Start Tracking</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="radar-grid"></div>
+            <div class="radar-container">
+                <div class="radar">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-ring r1"></div>
+                    <div class="radar-ring r2"></div>
+                    <div class="radar-ring r3"></div>
+                    <div class="radar-ring r4"></div>
+                    <div class="radar-center"></div>
+                    <div class="radar-blips" id="radarBlips"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            
+
+            <h1 class="hero-title">
+                <span class="line">Detect competitor</span>
+                <span class="line">pivots</span>
+                <span class="line highlight">
+                    <span class="months" id="monthsCounter">6</span> months
+                </span>
+                <span class="line">before anyone else</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                AI scans <strong>847 signals</strong> daily:  job postings, patents, LinkedIn, partnerships.  
+                We detect stealth pivots before public announcements.
+            </p>
+
+            <div class="hero-actions">
+               
+               
+            </div>
+
+            <!-- Mobile Stats Cards -->
+            <div class="hero-stats" style="justify-content: center; display: flex;">
+
+                <div class="stat-card">
+                    <span class="stat-value"><span data-target="94">0</span>%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Detection Feed -->
+        <div class="live-feed">
+            <div class="feed-header">
+                <div class="feed-status">
+                    <span class="status-dot"></span>
+                    <span>Scanning active</span>
+                </div>
+                <span class="feed-time" id="feedTime">00:00:00</span>
+            </div>
+            <div class="feed-items" id="feedItems">
+                <!-- Generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="problem-content">
+                <span class="section-tag">THE PROBLEM</span>
+                <h2 class="section-title">
+                    <span class="danger">70%</span> of startups pivot silently
+                </h2>
+                <p class="section-desc">
+                    While you're celebrating victory over a competitor, they've been preparing 
+                    a new product for 6 months that will make your business obsolete.
+                </p>
+            </div>
+            
+            <div class="problem-timeline">
+                <div class="timeline-item current" >
+                    <div class="timeline-marker" style="border-color: #00ff88;
+  background: #00ff88;">
+                        
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Stealth Phase</h4>
+                        <p>Competitor hires ML engineers, files patents, changes suppliers</p>
+                        <span class="timeline-tag invisible">Invisible to market</span>
+                    </div>
+                </div>
+                <div class="timeline-item current" >
+                    <div class="timeline-marker" style="border-color: #ff9f43;
+  background: #ff9f43;">
+                        
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Preparation</h4>
+                        <p>Closed beta tests, unusual partnerships, team rebranding</p>
+                        <span class="timeline-tag low">Weak signals</span>
+                    </div>
+                </div>
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                       
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Announcement</h4>
+                        <p>Public launch. Too late to react</p>
+                        <span class="timeline-tag danger">Too late</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FEATURES</span>
+                <h2 class="section-title">
+                    Two levels of<br>
+                    <span class="gradient-text">detection</span>
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Stealth Detector -->
+                <div class="feature-card featured">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><img src="data:image/png;base64,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" alt="telescope"></div>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="feature-badge">Core Feature</div>
+                    
+                    
+                    <div class="feature-demo">
+                        <div class="demo-header">
+                            <span class="demo-title">Detected today</span>
+                            <span class="demo-count">12</span>
+                        </div>
+                        <div class="demo-list">
+                            <div class="demo-item">
+                                <span class="company-dot red"></span>
+                                <span class="company-name">TechCorp</span>
+                                <span class="pivot-type">→ AI pivot</span>
+                            </div>
+                            <div class="demo-item">
+                                <span class="company-dot orange"></span>
+                                <span class="company-name">FinanceHub</span>
+                                <span class="pivot-type">→ B2C shift</span>
+                            </div>
+                            <div class="demo-item">
+                                <span class="company-dot yellow"></span>
+                                <span class="company-name">DataFlow</span>
+                                <span class="pivot-type">→ Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-stats">
+                        <div class="fstat">
+                            <span class="fstat-value">847</span>
+                            <span class="fstat-label">Signal Types</span>
+                        </div>
+                        <div class="fstat">
+                            <span class="fstat-value">24/7</span>
+                            <span class="fstat-label">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: DNA Analysis -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEuUlEQVR4nO2ZW2gdRRjHF9FXL/ggKn0RJWf3nDTipWBrqJdALKIiFFSkUER8Ei8o0gdF+mAlFNHmQUhRULSJzuxJmsQ0WNumrTRNTZuLaZPGJk0aczNJc+1Jzszszl9mN9nslmBqspsc5fxh35aZ7/d9/2/m23M0Laussvr/i+l0D0tQYb3XAJwcAo4PAkcHgJ/7gUN9QNUVoKIXoJchf+iG/L4L8ttLkF93QpZchPyyA7L4AuRnbZBFrZCftEDuboL88CzkrkbI989AvnMa8s16WIW1YAYVas/wAAyS5gYF32gCvw6tEKJ9eYi3T4MnTKi9mEHnwgSYdgAMCtQNAKeGo6nEW/XOHg6ATodDA+AG7VxYWJb3AA1/Qf7YDbGl0tsw/IecDw9AJ+bCwvaeZqBxBNYHZyIMnoLr9EBoAMwgOxcWFi8cBs6NOpUQW6oiA2Ax8npoAMiruJ3plDmLxylkVa8DoSqh7BRGT9i7fvP7n6dySu/RwhTXSdKrwstHgZaxUCFEYa3PPqRUC1vphBlTmfF6YX9HaBDWuw2L2TeoxQzyoBaFmE6LvSw9VA6pgvNBSPPyqvuC6bRYi0q4j9zmP1LFUzVuxuchLJ+PV3jydKk9tCiVziE5zKBTHkRBDeSJQQdCHuxdcQWYQdMsh+RGGrwHETef8/eDeLoG8nD/DfeE3N8B8djiJch0ykSMPKutpdSG3oyknk0HIcu6loWQ+847/eM/MtMG2a6th9xKkJQHkZuE/Wkz0Lw0hF3U4g1rbvBkQuhmgbaeYvFkHtdpn9/P4qUjbsavg+CbK6XvvR6m07iWCUo9QO5lBmkIQDxe5VrKgxge4PlV1W7DktNIlN6lZZLwcMktzCB7mUEWs5wwYX/UCDSM1OPsyN3qvdl42QZoH9+kZaqEbhakdToSOCLj9ISqkvZfkNDpNqbTq0uc86NrflT+G2Fr3c3MoEUBC8WVjfwQRCqbKbtpmaTZeNkGppNTgSbOr3bGblnRA5EfvJ1Vw2eMpbhBNjGdDgWCf/WYe6H1TAPdU0DTKMSOuushBnk8+ei6Bp+OkRcDF9nGJOzP24A/U0DfNaB3ZhHij0nYe1udd3wXWUpdhusTvEG2M50IL/jNlZBHBoDhWWAwBfQvAXFp0hn4eHAO4ioRax3884Fh7playN/HgbE0MDK3PMTxAWcA5H6ItaoEiyUTftuIbbVA9zQwwSAbRyG2Vq90nJ6LfLTA/d/dGvigKTzkZnaaA5McVlHran+N6Iz0g4brtMTb7JEKyPYJ4JoAZrgDIc+NrbgCfPF02hdJ8Ol4me5vWrv6CjBnASkRgFCVUHbCOLvhnrC/6gj2Q8KMhQ7ADVruWeeNkwCzgLQVGoR45Zjv25gkQw0esfI7vewnTMj2cYDboULIX/rd0WP+ExO5B+4IDYDp9DUv+zvqAMt2IMQTP622afEPvbAzNACuU+p5/5tOB8D6oi2y4LlrIzM0AKaTxoWFZetVwJKQHeMQT0ZXAW7Qi+EBqMFrfmHHx7Z0IFQlnEfY4fTEhQn/xTYVIgCddRbOS7rBKoAoIHpnvGFP/WQT7p98uaaw1KQppftEBGHtbgJLmOH+yZdVVllpGau/AYNPCiVPRB4mAAAAAElFTkSuQmCC" alt="biotech"></div>
+                        <div class="icon-glow purple"></div>
+                    </div>
+                    <h3>DNA Shift Analysis</h3>
+                    <p>Visualize business model evolution.
+                       See how companies mutate over time.</p>
+                    
+                    <div class="dna-visual">
+                        <div class="dna-strand">
+                            <div class="dna-node" style="--delay:0">
+                                <span class="node-year">2023</span>
+                                <span class="node-label">SaaS B2B</span>
+                            </div>
+                            <div class="dna-connector"></div>
+                            <div class="dna-node" style="--delay:1">
+                                <span class="node-year">2024</span>
+                                <span class="node-label">+API Platform</span>
+                            </div>
+                            <div class="dna-connector"></div>
+                            <div class="dna-node active" style="--delay:2">
+                                <span class="node-year">2025</span>
+                                <span class="node-label">AI-First</span>
+                            </div>
+                            <div class="dna-connector dashed"></div>
+                            <div class="dna-node predicted" style="--delay:3">
+                                <span class="node-year">2026?? </span>
+                                <span class="node-label">Consumer App</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Signals Section -->
+    <section class="signals" id="signals">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">DATA SOURCES</span>
+                <h2 class="section-title">
+                    847 signal types<br>
+                    <span class="gradient-text">from 12 sources</span>
+                </h2>
+                <p class="section-desc">
+                    Every pivot leaves traces.We know where to look.
+                </p>
+            </div>
+
+            <div class="signals-grid">
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE6klEQVR4nO2ZbUxbVRjHGzdNjMZ7i7DExA849YOaLM4l02RkUaMuS9RF4xLjF7+4ObiHN3VBoqEGGINFF8DwJibzBd3U7F3AyWSQMZAwCSMOh7ysPbcFLmWFlrK2tPf+zS32crtR6O2F9Uuf5CRN73me+/zO83JOTw2GhCQkIQlJSLyFpRnbWZ47xvDExlISYHmCJQclAYYnVnmu0ZKRFm+/DYbLe+9mKVcb0eEVBsOTagNM6+Pmvx7nFyG4qjimTdhqHk0yZz5pgOmuiErYvc5oyXhKTiG1rjEe6aR2QnZesz4lP6mi8KPhTkuwYP93ILjyGmUhEmQBgHK8YS3lYZp7L8tz+QwlAyxP5vXmfeTBeRlKOhnKfbRqxX3f+L4NLCV/Regiup1mIsN0M5Z0oz7vYVrPUK5r7VacLD8ouSC36pj9ZynHhYw9yGfhoLsJVyQrrsCGXvDogQV/4jo6MIJ2DKEVgziHf9CIqziNfhxHH45JvWiQevCN1I16qRM1UgcqpXZ8IbWiVGpBkfQbCqRGfCydQY54HK+4ymFUR0hOp1iEuZ7NspTYQ4ZMrjMYgh3XIOAqxtcM4kPpJF50HlbvE877bXuTtQPwXF7IyNPjJgxLkxjB1B2ByJVOIHUiT18UWJ67HDJQO9eGstlmPDqWB276hzWDMImNyJz/OQixy12tqgXumrbVt6RvDClvsOZiWLLjibFPFIPdAfOqQ5SKLUgdX1j1HTPl2C+eQootR3nnAzTjsagBjJR7J6T41lQ1BLjwqr1SMVY317bq6bTH3aDY3zT5WTCdNk8VqjtSRtQAyeach5L5rNFU236c9w3AjlkUuc4qxl6zV8KMG0tCVHkuYKtQhBRrljI/2ZqFLUIhij1NS0J8JV3ClskiZf4bzppgTexyqdKIJ/Wa0mgGnped8GAaN3EDc+jxm4OtNGTw0GzzbRB1N9tX7O1LQbzrPKI8T+IzUeBvDNbEe57FqDCU69AE4IZvjwteqCHSHd+HOSNHosJ9Hid8vbgYGMZzEwdWBHhmohDfBbrxue93fOD+BWn2srDnbzprlMLO959GTOclhpKSJD7L/+nMSaghrNI0XhAORbWLdomjSk20ioNR6WwWClErdiiFXRI4pz5yzEQNwPKcb6EDZcMNXxgELznwvuPbYKiXc+bWwl5urpHPxOuOL3FE7Aor7AqpTd1KRQ0Ai8bn4LsNQk6nXr8Fxa5f8fZULbYLZXh8LD/MqVu7k/rZxrE8bBWKsXOqHPtcDaj3d0TsTmq9mAA8mI8IIXcnucWOwwkrZpBizVb0+kSrAtEpjirfy91JS4tl9QJ44Y8aYptwcMU8f1Y4oGmfYPUCzCMQNcRRT/gLlxo1njZNmx2rF8APUTNEmlAalk7y521CCb72XNS8Y7N6AQIQNUOEaoLCEXHHjhaC1Q8gxRWC1QsgBgHiB8HGBKC635QdjhdEEwZUGxkJRA3AUEJDip3eoSBAPCAqvH+ozkLErCUCdSHFTeMFaPcO3tFIXMIIqrxtYbu7pjtUxkweYSjniuYApmfsmDyMAWkiCNEPG3bayyPM5SY0/7BnrOQllhJhrSFOefuc/2LS0ezrd0ZynuG55w2xiEwt3+EzlLMs+8dFrINyLYa/TfcEX4bd6xhKzoYKVs55OW1iulJJSEISkpCEGKKU/wCHgN08wqvjgAAAAABJRU5ErkJggg==" alt="red-purse"></div>
+                    <h4>Job Postings</h4>
+                    <p>New roles reveal new directions</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength:95%"></span>
+                        <span class="strength-value">95%</span>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFhklEQVR4nO2Z7U9TZxjGifrBJcvaveCyD/NlmizLPm3L/oHNmbi5+RJ10yzZRAeTFicquumCbmZumqkDBNEMUUHAKut8RRFBUIEJKAoCogTXAlVeymkFa08557ecapFCmS204DKu5E7a9CXX79zX/TwnzwkKGtGIRvQ/FetHqQyaGJVRa1MZtJuC/lNi/Si1UZOkNmpRSmXQdOwgb0oM+ZqtUm7aZinn8iYpu+0HKUuMlk6Ia6VjrVHSkcuRkj5tGbrwCNInPzXm1UYt77dtNe2SLxIvFxAjn2OrnMsWOYdNcjY/yqeIlk+yVj7GavkIK2Q9y+TDhEsHL4aSvnAeutF+9afE4WEsNDGK2SeZn27+jWSKSaIInyFkHV9JaTUhpEzzI4Cm47FBTVI3hAfzM8yxpFNKKiXs5S8nxGwhgReMEd3fUeqdlo1skLOcEPM6dhPc8I3b52pvyqBxeDVrKqM21v3HTogxvc3PNMfxB+Uc5goZlHVDjGtY7tHASnumsxNvNkf7bt74eNae3AIPV1pt1Nzq+X62OZ6TVHKMCvRcdYOYKyT26cC7LT/xi3zGGaeFHUkE9wOp9kcH+od4WHPNCeRQQzbVZHHdI4QrTgOZiVA5nUVSaskXJI/1zqwPEPPNieRzi3Pc5Cw3Ag2RODiARxBvmTbolVwvat9DMfUUUc956oYGgtTpg/KfB2OqMNVW0EQ5DZRh4BK3hw5CSq8e1D5RR8vntTRTxR2GC+IrMj4bMMBt2orqaGE4IZZKugsDMm9AmGLAzG3a6A9C77jCKushDjrKAgchHZK16Cb5DGBC0DQg0B+ETizl1cZVztXpDdP3Ae2EFl2YzwB3saaZsOAJQi+WM/6ReRdAIOMUKelTvTb+nCF8isqgXVko3qq6i5XeECfEa4xvjOo2r4BkiCUBnYko6Uip1wBqo7ZOMTahYZWcL96gJ8RpsZIJvcxnipfdBjvTcYVIq44Iazpaaxrh1gMstaYSak1hiXUfi617WWf70w1ijU3PfMsu5loSmWPZyWxLAp9Y4plh2cGHljimCds7VAZtlHJxvQZQamJjFC6Is2K1m3nl9VHxap/BVuLkzb3Nz/ZTTohtjtw+907/UnVPBFA1at5WGzVtPSF2d+b3MZ8lVnpcnbwF2GI/7YxTjOMcL/oTwAWhRMjTnyjms8WqflenE44KllvSCRNSCBX2s0TYx2JhL4uEZL4U9jhro+2420ysf3CceZZdzBF2MktIYKYQz8fCDj4S4pguxDK1fXun2qCJ9ipCLhXYa2smNq52M690I1es6TPYgd7sNktnvB9il2yIBy6J9bggFPMFYi2tdLgN9lBA/CqdTfEZQKQr/AEOqhwmtlmzqXAodm2Y6RxyiFjyfd/IbDDZjkNWIGw46ETkHg+GHCJRuiDvJG9i0EDkoKtQpIvhhPidwvNBA1UXLHQgMcwQ8wcMAIzuQqrxBGHBRmR7BuMaIvlWyAwIRDql13WDPfgCPpCQ6QmhAHxt3t+9vL7SsCIgncik/L0gf0iC3S4IBWBpD/NKLW/P8HucjnItwW9Hi8AzEpQoAOHmFDfzSieUOPl5JorzqB/r16PFO9x7OaR1j9DTvNIJJU49B/s7IZOXjMt8OrSa1LSGffYiF0R1iCXldZVBezWgR4tKJ5Q49V6dlHnw+dTNqCWkPZlC6osLqA1+3qBdENCjxVnNcdVKnDytTusEvc8deK1pDbH3cw67YvNsU0TwgDvQP4R7rICpXUjVftgnrldi8s9q40UnHh+3d+8TLHDQdcGX246/aZPraT1/k+ZPAfdnEIF7DubhgUcP2WCSSFeYDTHVhqOsE3urFZu9nfv2NjpbWrlXehdrahNCmIn2gd3bjGhEIxpR0NOmfwBS5e9EJUEqbAAAAABJRU5ErkJggg==" alt="todo-list"></div>
+                    <h4>Patents</h4>
+                    <p>Patent filings 18 months before product</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength:88%"></span>
+                        <span class="strength-value">88%</span>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,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" alt="batch-assign"></div>
+                    <h4>LinkedIn</h4>
+                    <p>Team rebranding and new connections</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength:82%"></span>
+                        <span class="strength-value">82%</span>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIYklEQVR4nNWaC3BWxRXHTwIFcu8XHgbkVSmS0oGkrUJlYETEEYHCjLEFxA6dFB/VWiyltKI4FIWpoQpoAIlQDaBAKFSGYqCitEUqKBUIAgEGoVCCREXDOyHZvXv339mb7GZv8iVAvi9Az8zOJHv37p7f7v7PnrsJURzN8WiYyxK2uiyhLJknnnQY5bQCtab/B3MYZbqcULM4nA60A0WuukMuoxkuo3KX0+sEcuprq2bZYXQuGkBQGE2nq20uo1JrFvdFKiitrrYOp2d02y5eW0ySE5EhhtoQu64FwMwas1jqMBpbqyGoucvoC93uATES0+RzmCwnIZknVk4Ao/N0LcxhNNZeiSqQmTXa/Fw/6+S1xh/lC8iSWQHEYHEnWrNmZa5Hf1DtHE5Puh4NJlDiVYOIVFCa2kL2SpiHoEQlUv1stBiJl+VczJSzDMRQ765PIizBrzEJHzugDlcNQolYiTkQNaMZFtwI7VQKT8IcOR+vyAUGYpz/eHRRV26rTQ0dN27mMvpIOzRKZGCJfAML5SIDcZv4rnE41euIfuJWtORNqkE8GtyglY+HRTgN0J235t9ArlyIPLk8BHGTl2Kc/bX/K/xePoN+ope9Chsbqr2YzeWUrzv/sRiCdXI1VsuVIQgFpttMl9MDTYz3f2mik1sJ0atB0S8Wi1RQD5dRIMwIT8AyuQAbsbYWRCve1DhiR6feIs0+qVc09Pyp6/T1opykni0il9Ni/WyYuAPb8C42Y30tCHu/z5Ivm+gUEjcj0bKcUhuSAUQDCO+7Gkup2iSVUWeXEdP1eXI+duEfAcT7WIfFcj6mikmY488MAagIZYfYNK+bvY3mXZGjsayAvUf7e7fgALagEO9jvVyOvl566D21vfTPOfK1UIh9xH/Q7r8sAmpLjW6gZg6js3rgXH82DuEjFODv6OF9s86Yr8oiuSgUYhVEqtfJ1sKzje6/yyi9Oq63x3+xA0ewHdP9icaRG3hzDBG3oy1PCgEslW/WOicyxRh7G5UQyG1UAPvkHe4NwAnsQREKcJ+42zjyvP9koIlc+VIIYJXMq3VOzJbZ6Oy1sbYcjbvSgHJF5nCarDsaL36GL7EvgPi+Jci1cnGgCbWt7IFXyqWBsBfLRSGI0WKE3e4ogZpebkC5YrPD5xx/GkpwMIC4kbum8514LxD2XmyKKmgVme4W/ZEjcwKIl+RctLPedxmNbrwVYPSh7midXIbTOIzD+LfpXIEoTShh78cH9Yo63bsZuVXCzhDDbQd3NMi5ywT4Sg90QG7DGRzBZvlXM3gvr3ugCQVxEFtDDifzBKR7XUOh9THxULCdlBZasaYm5W5xkW5qFACX0xEdgc6iCGdxDCv8V41D93oDUVwlbHtlVMnynw4Ou4n+o6buLtHXCLsn7+ZdTpYak0UqqOd476Fj2+UmnEcxzuE4ZvlTjUPjxE+NsI9iRwhgB94LolOeXGDqunudTdpxjxhgt3+CGstKUVJcipO4gC8CiAni4eqEzX/aCPs4PgkB7MamIDptRb51ZjRDvnwrgMgUD9hnwtxGcR44GSnDKVmGEmiIUeKHZuBl/iuBsBVEMfaGAAqx2aQd7XnE1K/G0iABnCx+Zwt5Q6MAMJzpXY6zuIjT0BADvT5m4H/J/EDYCuIk9ocADmBrEJ0UxK1eqql/XWYHWewCP9tufyTuzqsbhRTW/NwUMRE2RI4/K/hwGeT1QwmOBsJWEF/hYAjgELaZEKtScF3/oj8lSMX/hrcQYQmyagV8ArWIn/fq9oHR+cpwmIhSnApBfI0iowklbAVRjMIQwH+w3YTYR8T9pv4p/xfme6I771heBcBTQMlx87/FReqiB/wWbwuGC6jAuRCELWwFsVduCQEcQ4EJsc/6E0z9g2KE+Z5Y4M/iEZ6wQp/GcTMVl/WAg7zbwVF6SYg8vzpcqvIZdpsQm+vPNPXDxB2BsKs/ijZ0javzAQCnJ/SAj4uxEPLiJSEyw0kaTmCvCbHvyj+b+j5eDxOdFMSH2DA07gAqLusBZ4ss+LKiXohP5S60sW4kVFGa0CH2OHbhe97NJqvV0UlB5IrZz7mcfptcQd+Jj/eVt2MntCPrxRpIyeqEKMMp3G8nZ1WlCHtMiFUQSgtb5FojbA3Rlbc9VfXOCQIlxOy/w2mKdiKVd0SZPAdIr06IGVZqYZc98gMTYjXEl9hnhK0hOrJkc2HQvJxi04MLutH+w8VisRCQIgCIBvEnf14o24ywxM/1zyv9XBNi64Poy9PLTUrhUWx6CK7Dqzr7gZcGIXkVQG2IQ34hUngLO5/Z6DLK0r8/KsaEzom6IDK9jMrDrLKMj20FOL2tO1vlLwcgAelHhbjXu8feMgU3gFomceqn69rxJBRh/yUhpvm/sSdhfmwrwChHd9aDdxGTxAS8I/NxQZ4NQfxFLLMTMeEw6q37iPCEAv3sMTGm1ol9pgbEMn9eOCcCNWswQBKn2+xbOF1asiZyIO8rnhdTsU6sQTfewZ617NAkeDTcfvc1P7teiCP4GJ1YK3sbTYhpFSIVNNLlVBQtskQpn0XLYRxOebqNSvxW+UvqhZjhP2VPyNdtQK1iglB/yHM8GuIyetHltFPfTIcKo/IIpzvrOUt26rbteTIOy911QnyOQvTgneO3CjUtGZQSqaBRDqNXXUbvuIwWqs/N+t5xQB0dToe0Uz8RGbUSQBtiof+CPUH5dD2YWiGXkZnZt+XKWhA75T+DO6f+/BZbe2/S9WL25VhPrwsK5BYs8efjYTEa3+YdZJStKVUgoOvF1DW6yxJKLisoMCpzOE2i682SKuhHUQMBD6LOaZfTGnXRq3RzrX2t01yPBqnbB4fTpyrtUP9vkcSpD4GaXElH/wPIJ9JO+tSR1gAAAABJRU5ErkJggg==" alt="high-five"></div>
+                    <h4>Partnerships</h4>
+                    <p>Unusual partnerships and integrations</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength:76%"></span>
+                        <span class="strength-value">76%</span>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,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" alt="open-parcel"></div>
+                    <h4>Suppliers</h4>
+                    <p>Supplier and infrastructure changes</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength:71%"></span>
+                        <span class="strength-value">71%</span>
+                    </div>
+                </div>
+                
+                <div class="signal-card">
+                    <div class="signal-icon"><img style="max-width: 36px;" src="data:image/png;base64,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" alt="love-for-money"></div>
+                    <h4>Funding</h4>
+                    <p>Rounds and cap table changes</p>
+                    <div class="signal-strength">
+                        <span class="strength-bar" style="--strength: 69%"></span>
+                        <span class="strength-value">69%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="signals-more">
+                <span>+ 6 more sources</span>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- DNA Deep Dive Section -->
+    <section class="dna-section" id="dna">
+        <div class="container">
+            <div class="dna-wrapper">
+                <div class="dna-content">
+                    <span class="section-tag purple">DNA ANALYSIS</span>
+                    <h2 class="section-title">
+                        See the evolution of<br>
+                        <span class="gradient-text-purple">business models</span>
+                    </h2>
+                    <p class="section-desc">
+                        Every company leaves a genetic trail of its decisions.
+                        We decode it and predict the next mutation.
+                    </p>
+
+                    <div class="dna-features">
+                        <div class="dna-feature">
+                            <span class="df-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEoUlEQVR4nO2Ye2hbVRzHL1icoO09adWpoAiK/uHjD19DJ6JzyBCdL2TqsEOl6IQhOjer3cZgA8ccKFUQdepAhuJANmVMGVpwzLVbe07Sx9pmbbOcc9PmJmneSZMl937lRpLchq6P7d41YL5w/gu/+/2ck9/jHEmqqaaa/r9q6Pbe4uhR3iJM7CWMHyVMdBMqumTKfyNMfNLg9K5p7HQ3SFWlDtQ5KH+FMHGSMIE5FxUZmfF90s+4bLGtSw2U308op/MyXrHqnWLZopp3UO96wnjObOpal4LH3CG0iDg2T6SxVc2g1Z/BG0oKT45FcfuAWvjdjb3j+WZ//qMNbixZFPMyFTvNxpe6FKznMRyIaTiUAA4kgP1xHd/HdHwV1dEe0bE7rGPHpI6Nah7vBXRsUHW0+DX6qg83LcLOi5L5h4ZUHIrn8Xca+CsF/J7EnBBbQjreD5YgfM0TuOOSmG/o8d5n/ts8dSaIU2kd3RngxBQuGOIFkfE1MtErU/7rNf3qVfa470CdOWEfGVbRl9FxOgu4MrgoiAeGw6UTlZnYbot/wvja4keucyk4ns5hLAe4z+GiIZ73JssAlCeu7B1dagOAOFX8yDZfDEoe8OZgGcSt/X5TmfW2Wd5hzbvvzmqYyMNSiDXcdAqMOy0FIJS/XQz+4mgIYQ0IarAUYltIw9VOpQTh6PZZV14JE98UA7erCUQ12AJx9+lAGaCHr7IOgPI/i4EPx6YQ12ALxIqRiHlmesc6ANOg1pXMIqXDFohnxmJmgA+tA6Ciqxi4M5nFlA5bIJ7zRM2JvNkyAJnxw8XAByNpZHXYAvHESLmhGfcKywAI5Z8WA388HkNOhy0Qdw2Ue4GD+ZZbBmDcpIqBH3eryOuwHGJfJA9HqZHxXNNgsN4yAJl5CGHiXGHmdyoF81ZDvM7LCSwzftQy8yUIKnYQKrKbRHhKw38AVkEcSWqFDk/KY/oZ2+7OADbqAKyEWHvWVP9Z6RRO2AIBYAmAk1ZB7FLLMxApJO80kG651+uwA+J6msr6P1PjGM3mLhhit5qcNv+sHgmhbSJ5CSA6UNfERNT4wA0uBd8GkwtK7MGshhZvueYba9mQiuNpvZAT9kMYtzPGA2YDjw6r+HEyhZSmnxeifyqPnf44bu7zTTP/4JCKY6n8tMS2HcLh5HfKjLsqk894oVjlDuBdEcFWXxTbx2N47ewklg/5Kw0V1sueSQxm9RmrU5vtJ9Hff7nxxCJTnlzow9Ztfb7YD+H0nCW2dTwxDcKoTpY2OUPGrsiMb5KZGCCU67M+KxrvpFQ0r/N4rgho2D+fPtFaAUGo+EWyS/VdShPp8a42hjGZiQ8I41sIVdY5nN6HK3cOQN0uNd65YjiAL4OphZ0EVVZK1SCZ8nix/u9RE7NCvOQxVS4qvpOqQYSKP8xNbM8sEHvDGXMu/CNVg4xxwUjM+UB8PWkCoOKYVC2aL8TTIyEzwOdSNWkmiDd5BAdjGfwUyeBZk3mj0sk93nulalNjBcT5lsxEu1StahoM1ht1fuY+wvWC+Q7USdUumSorjVJpVBsjYWUqvpBdvnsW21dNNdUk2at/AVubbIQwcQyhAAAAAElFTkSuQmCC" alt="search"></span>
+                            <div>
+                                <h4>147 Parameters</h4>
+                                <p>We analyze every aspect of the business model</p>
+                            </div>
+                        </div>
+                        <div class="dna-feature">
+                            <span class="df-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEJklEQVR4nO2X22scVRzHF0Qfm1kvID4I9iL4YEHxRVps+1AfWoItqP9AsVBEFAsKipdC1UpFfNCiCSr2QdKAIFQQL9jGQok2mdlmkzSbbLbJnL1ld2Z3ZpOZ3Z3ZOV+ZNTuzt9nbJE6F+cEPljkc9vs5v/n9vmcCAT/88MMPP7Yjghw5GuTIdJAjGsMReJQaw5Ebppa+xDOh+LCHotEu+4Iwqb0WzLTm370DsKRc2zhdNDBXBsJlIFQC2BJwowhMFoHrKnBNBa6qwB8K8KsC/LwBXN4AflwHflgHLhUovi9QXJQpvpUpRmWKLyWKzyWKz/IUn+QozuUozooU7wkUbwsUb2YpTmcoTqUrNgBLyv1UwNq4pAELGjyDYOq0DAQQ1eApBOMWIKbDUwjGLcCKjm2FGJEp9kUE3BsieH5FboFwDcDr2FaI00nF+q89c6mWSgStJuaNgQDiOjpCjIhFHIxk8MR8GidXJUwotC+IvfNr1n89F5NaXqcnF7LVtSGWvzwQQLICR4iLuZJ9Qpt5JCr0XIl306q174FQHJ/m9Jae+FCkOJFQvwiM466BAFIVOEIcjwptTecVXsKfPVTiqVv26R+L5R0b+yPReL9n8c0AaxU4QhyIZBydc1c4iXdSG1WQdhAfZ0sNp38hpztOp/NuALIG2kLc1oHH51JdrwCPzaXwQVrBxCbE7xvAd3kdTy/Y8MdiOccReyar4eCS+MuOaX73QACigbYQF7JK82WrWpE3EjJ2h5MtIHvn0zhFZDzStHZ/KI7RvO7oEzvDm4fEkuWBAPIGWiCWNIo9s7aQV3kJMyVqTSe2SPFWsoCHZxJdK7Q/kunoE659QDLQAvF6XLLWH51NYr5M247YSdXAa3EZD3UAORIVOvqEawDZQAPEpKJVm662PpJVuprdhGLghZjYFuDEqtTRJ1wDFAw0QAwv/WssZh5ezCDRwSfqIbgSsH/BHptmPngzgXFZ72h2rgHWDVgQt8tGXfMRXFO0jj7RDPGXSvEykbEvksHxZRHjkt7V7FwDKBQWhFmFF5cF3BciOJsqOI7Yrbw7MW4BVIoGiOae2G4Ixi1AkcJTCMYtQInCUwhmIIC6j3pBNzyD+Gnd6P5RPzSzupNh+StBjujdXPPw4hrECm2AuKnqPd2Jtji1IY5c3TG1uitg/uhn82+FUkMlzqcL/7V42FXhr5gAaq8bnl1cQ75CG16nsDcVgJmmdhMgWXsQKeqgAAwzKVCpS30zNQpPG/ubvGYDsCQeYDh+vPbg5IpYBbiTIY5GBbtXWTJmVuBQfVleWhFxq6hVhd4pENdVYEzSMBwVaMNrNM0/UxubX3vWiNzADfyVPUtnZ+9hODL6vxI/NXV3GwPjDzAsf8lsDobjK54L5WrJV6qaWDJmvTZ++OGHH34EtiD+AUQbez7MTwMJAAAAAElFTkSuQmCC" alt="laptop-analytic"></span>
+                            <div>
+                                <h4>Trend Detection</h4>
+                                <p>Change patterns over 3+ years</p>
+                            </div>
+                        </div>
+                        <div class="dna-feature">
+                            <span class="df-icon"><img style="max-width: 36px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADCUlEQVR4nO3ZMWgTURgH8CDoek+qWEdXxVF3teLq7OBcqGIQS2sUXBziIoiLgwoODg4OgnSQIgjVoo13qcRqU6XN3Vmba5ter02aNLn3l6TX+K7tYZK77w2SDx6B3OV775f33XuXXCzWjW5049+RSu1nmn6bqbrKVKPCNAOtNEUzNpimXxFTKVrug9I4pk/EgH0x8shkDiiaPt7qoHe23i9mfnARQ9fyGBrIY8h3XDWekCMa33yHg+9Jm7g45yCxxDG4yBG3+O7zVGJEo2y8zuKmg5F1jpF14NUa8HINeOFwPHc4nq1yPF7leGRzPFzhuL/Cca/AcXeZ484SbyL2xKrGUzKEWPOjRY63ReBNER0jAmdMJUKInYyVgHclhEKI+U5lC/QIsYPxDYRGiPniFqdHiMknNhAaIeYb9C5sUoSYWC0jNKK+Mm3nu2HV6BFi0skyQiOOT+VbXoaVtDERKSBTQWjE1flSW3tJLErA901EhjgxlfeV0x63IdEDZjYRGaLVzS4WJeDnJqQgGBVgtgopCEYFyFUhBcGoAGYVUhCMCjBfgxQEowIs1CAFwagAVg1SEIwKsOxCCoJRAVZcNBFnprfuac5OWz5E3LTRk27nZ6eBS3O2D0EGsF00EUGr09HJ4NuDoHYkbfpmggzguGgi+rJW471z05avnK53MAOXc7avnMgAay58CKprglEBihxSEIwKUOKQgmBUgDKHFASjAlQ4pCAYFaDK0UT0Zbf2gfNZy4cY/mXjUJurUL9u+xCkgG1E0OrUyT7QO2n6ZoIMUPMA9XbB2wfqr2I5JTqYgQHD9pUTKUBEUF0TjArgegBqBCMDAFIQLFKA8Pd6mXNyhFYW7oVUoxIBQP+8nfBB3iFFTFU4EvOOOAOpKGYg0e6yuLOd/raAmXJtF+JTqYqTX38Hf1Y1bkbyhFLR9PdhEbdM+7XtIllwkVxykbSqSPbnCqNB5yuqPlbvOzzAQ3gzkWrnMevfwRiZwx9ne3emVdJzx5hm/BBrvt7HQdUYjm7w3ejG/x1/AJzr/FiaY7f5AAAAAElFTkSuQmCC" alt="brief"></span>
+                            <div>
+                                <h4>Mutation Forecast</h4>
+                                <p>Predict the next move</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary purple">
+                        <span>Analyze Competitor</span>
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag green">CASE STUDY</span>
+                <h2 class="section-title">
+                    How we detected a<br>
+                    <span class="gradient-text-green">pivot 5 months early</span>
+                </h2>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-company">
+                        <span class="company-avatar"><img src="data:image/png;base64,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" alt="bank-building"></span>
+                        <div>
+                            <span class="company-name">FinanceApp Inc.</span>
+                            <span class="company-type">B2B SaaS → Consumer Fintech</span>
+                        </div>
+                    </div>
+                    <div class="case-result">
+                        <span class="result-label">Lead Time</span>
+                        <span class="result-value">5.2 mo</span>
+                    </div>
+                </div>
+
+                <div class="case-timeline">
+                    <div class="case-event" data-month="-5">
+                        <div class="event-marker detected"></div>
+                        <div class="event-content">
+                            <span class="event-date">January 2025</span>
+                            <span class="event-signal">🔭 Radar Detection</span>
+                            <p>+3 Mobile Developer job posts, P2P payments patent filed</p>
+                        </div>
+                    </div>
+                    <div class="case-event" data-month="-3">
+                        <div class="event-marker warning"></div>
+                        <div class="event-content">
+                            <span class="event-date">March 2025</span>
+                            <span class="event-signal">⚠️ High Alert</span>
+                            <p>Visa partnership, Growth team rebranding</p>
+                        </div>
+                    </div>
+                    <div class="case-event" data-month="0">
+                        <div class="event-marker public"></div>
+                        <div class="event-content">
+                            <span class="event-date">June 2025</span>
+                            <span class="event-signal">📢 Public Announcement</span>
+                            <p>Consumer app launch. Market finds out</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-impact">
+                    <div class="impact-item">
+                        <span class="impact-icon"><img style="max-width: 30px;" src="data:image/png;base64,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" alt="last-24-hours"></span>
+                        <span class="impact-value">5.2 mo</span>
+                        <span class="impact-label">ahead of market</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-icon"><img style="max-width: 30px;" src="data:image/png;base64,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" alt="money-bag"></span>
+                        <span class="impact-value">$2.4M</span>
+                        <span class="impact-label">saved by client</span>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-icon"><img style="max-width: 30px;" src="data:image/png;base64,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" alt="radar"></span>
+                        <span class="impact-value">3</span>
+                        <span class="impact-label">countermeasures launched</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">PRICING</span>
+                <h2 class="section-title">
+                    Choose your level of<br>
+                    <span class="gradient-text">surveillance</span>
+                </h2>
+            </div>
+
+            <div class="pricing-grid">
+                
+
+                <div class="price-card featured">
+                    <div class="price-header">
+                        <span class="price-icon">📡</span>
+                        <h3>Radar</h3>
+                        <p>For growing companies</p>
+                    </div>
+                    <div class="price-amount">
+                        <span class="currency">$</span>
+                        <span class="amount">799</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><span class="check">✓</span> Up to 50 competitors</li>
+                        <li><span class="check">✓</span> All 12 data sources</li>
+                        <li><span class="check">✓</span> Daily reports</li>
+                        <li><span class="check">✓</span> Slack + Email alerts</li>
+                        <li><span class="check">✓</span> DNA Analysis</li>
+                        <li ><span class="check">✓</span> Attack Prediction</li>
+                    </ul>
+                
+                </div>
+
+                
+            </div>
+
+            <div class="pricing-guarantee">
+                <span class="guarantee-icon"></span>
+                <span>14-day free trial. Cancel anytime.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-radar">
+                    <div class="mini-radar">
+                        <div class="mini-sweep"></div>
+                        <div class="mini-ring"></div>
+                        <div class="mini-ring r2"></div>
+                        <div class="mini-center"></div>
+                    </div>
+                </div>
+                
+                <h2 class="cta-title">
+                    Ready to see what's<br>
+                    <span class="gradient-text">hidden? </span>
+                </h2>
+                
+                <p class="cta-desc">
+                    First scan is free.We'll show you at least 3 hidden signals 
+                    about your competitors within 48 hours.
+                </p>
+
+                <form class="cta-form" id="ctaForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Enter competitor name" class="form-input" required>
+                        <button type="submit" class="btn-primary">
+                            <span>Scan Now</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                    <div class="form-hint">
+                        Enter a competitor name and get your first report free
+                    </div>
+                </form>
+
+                <div class="cta-trust">
+                    <span>Trusted by: </span>
+                    <div class="trust-logos">
+                        <span>YC Companies</span>
+                        <span>TechStars</span>
+                        <span>500 Global</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-radar">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEo0lEQVR4nO1aXYhVVRReUZlZZtibFRS9ZWEQFPQjNo71NFoPQW9DREL0ZEWlhQe0mbXOjKOO4U8l0g8l9By9RFBEBD1EYakEveio1ahUL6bNzCd7nTP3eu85Z59z7j373DuxP9jIXPfPWmuvvX4PkYeHh4eHh4eHh0c9QLCYIPcSeJDAG+IxSBi5R//vfwdMXkfgpwh8gMDHCTJLEGSM2XjOfkL4JCFYRAsW2H47gXcR+JyF4Zyha3cS5DZaMIAsI/AkQS52znhimL12EoKbqK8BeYIgpytkvF0jThFkHfUdgKsIvC3nfVc1zBmBntkXwKdXE/hQDYy3a8NBPbsPbv5Qh0ycJciReJztXAi91ASo2hcl+ERkHHlAXWNqfBCuJcieaG5hIWztCe+kjPBMAQKnCfxaKZ+Od64l8MaCBnWWMPq4U14TMO6oGHEfE8ZvoE6B4EYCHy5wzhQhXNrxOaUB2Z1z63ME3lLJ+1Q7I29Ee1rPnOj6rOIRXl6Qw1uammLedQdaEEWSq5t/GyFYz/yX8Natpc+p/vaN2sc3D94U//Y3QaQRyRl7gLG7CHw/gVe1EA5ZSZDP4rxgrhEGRx7ncG+1AJrYWGJ7PqPvNlNY/AdBviHwpZT15wnyJUH+a/195OHmfuHSeA+La3WZQMFkddbbf6Ft/ngJN5kxRh9s2/NF+/xwvUsBHLAcfkLdV+v8jRUI4JYUF3nSsmafSwEct6j/ZIr1/qJ7AcizKXS8baHjqCPmJ663JzvhY21ErqmA+Xm7ck3b3oOW+TNuKkswZazMQ+cSh1pvqewIH025DNualQ4EEK61CGA6OZ8/r04Aqc/A5o3WOBAAb7AQeCRl/ncVCuCl5P6aRdboCRCutxD4o2MNGE7Z/6eaBcADFpU7lTJ/tDoB8KqU/c8UNsg1GMFLapha5o/dV5EAjiVpCZYkI0bnRjBYbHeDPJBcwx92ybzJB4ZS9s1xgykFlxoCodHkfOOu+KsumH85nQ6TWGWu+8UN8wbasbEGLFEiolnexPJm0VReiYoWhd/8t5muTBMy+d2ydi85A0y7ykr8sEZtkO8J8hdBHmquVUE8EJXHUtdOEfhpAt9hp0GeyxHekEMBBItyWl2nCbtuju3FDwT5kzB+Z+se2jXKIn61/fyJ5Tm3P+2+nwjT77PewPvRPHmkebPyjBY2TG4P+c2y/nX72fJRjgbucMu8gTJiyk9WQjbHcz8oafi2UxZM+du+9gIhXEG1ANqxtWmBKWW9Gufupiz2tVpn/Zf/KSWAKK3eXEB4Y/Uw3yh2aqMyjyijAcvoSpjApqgAtNMsn+SfYwokV5TiagFkXbFmqIasw41qEfjX3FhCNUeez6n/za+ZSQ3CahJCUPx9qyD22ENY/lkru4UYb6x5szfMN9/neyUNXYWD36U+aY8f7AnzPW+PzyNqWmyt5wMJffM9VHsboixtyiHzJ3tn8IpCuzeyo0CwVGZcUD9fu6vrBqbfpxa9068/9ManI2HWFeE5S6BMPZH3atPC+lGFvu+j8dyhhf2hZBY0nx+5O6oxGsGocAai31xVcjw8PDw8PDw8PDyoDZcBYOgw/Fhc1aoAAAAASUVORK5CYII=" alt="github" style="max-width: 48px">
+                        </div>
+                        <span class="logo-text">Stack.<span class="accent">V_Mano</span></span>
+                    </div>
+                    <p>Stealth pivot detection for competitors</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">◈</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#!">??//???</a>
+                        <a href="#!">??//???</a>
+                        <a href="#!">??//???</a>
+                        <a href="#!">??//???</a>
+                       <!--<a href="#">Stealth Detector</a>
+                        <a href="#">DNA Analysis</a>
+                        <a href="#">Attack Prediction</a>
+                        <a href="#">API</a> --> 
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                    <!--<a href="#">About Us</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a> -->
+                        <a href="#!">??/??..?</a>
+                        <a href="#!">??/??..?</a>
+                        <a href="#!">??/??..?</a>
+                        <a href="#!">??/??..?</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Webinars</a>
+                        <a href="#">Changelog</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 V_Mano. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy??</a>
+                    <a href="#">?Terms of Service?</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
